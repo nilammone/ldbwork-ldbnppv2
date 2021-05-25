@@ -1,7 +1,10 @@
 <template>
   <div>
     <v-card class="mx-auto mt-10" max-width="500">
-      <v-card-title> <h2>LDB NPP v2.0</h2> </v-card-title>
+      <v-card-title>
+        <v-img max-width="35" max-height="35" src="/ldblogo.png"></v-img>
+        <h2 class="ml-1">LDB NPP v2.0</h2>
+      </v-card-title>
       <v-divider></v-divider>
       <Notification v-if="error" :message="error" />
       <v-card-text>
@@ -67,7 +70,12 @@ export default {
           },
         })
 
-        this.$router.push('/')
+        // check branch
+        if ((await this.$auth.user.branch) === '7') {
+          this.$router.push('/xay/dboard')
+        } else {
+          this.$router.push('/')
+        }
       } catch (e) {
         this.error = e.response.data.message
       }

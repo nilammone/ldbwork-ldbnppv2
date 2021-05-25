@@ -3,8 +3,8 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - EdlnppV2',
-    title: 'EdlnppV2',
+    titleTemplate: '%s - NPP v2.0',
+    title: 'LDB BANK',
     htmlAttrs: {
       lang: 'en',
     },

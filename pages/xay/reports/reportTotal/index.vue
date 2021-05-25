@@ -1,8 +1,6 @@
 <template>
   <div>
-    <v-container>
-      <h2>Dashboard page</h2>
-    </v-container>
+    <h2>report total page</h2>
   </div>
 </template>
 

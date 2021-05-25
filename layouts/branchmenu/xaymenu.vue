@@ -63,33 +63,33 @@ export default {
         {
           icon: 'mdi-apps',
           title: 'Home',
-          to: '/',
+          to: '/xay/dboard',
         },
         {
           icon: 'mdi-update',
           title: 'Update Amount',
-          to: '/#',
+          to: '/xay/udamount',
         },
         {
           icon: 'mdi-transfer',
           title: 'Data Tran',
-          to: '/#',
+          to: '/xay/trans',
         },
         {
           icon: 'mdi-clipboard-check-outline',
           title: 'Report-Total',
-          to: '/#',
+          to: '/xay/reports/reportTotal',
         },
         {
           icon: 'mdi-clipboard-check-outline',
           title: 'Report-Details',
-          to: '/#',
+          to: '/xay/reports/reportDetails',
         },
       ],
       miniVariant: false,
       right: true,
       // rightDrawer: false,
-      title: 'LDB NPP v2.0',
+      title: 'NPP XAY',
     }
   },
 
