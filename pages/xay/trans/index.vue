@@ -102,6 +102,8 @@ export default {
             apis_date: doc.payment_date,
           }
 
+          // console.log(response)
+
           // tran to apis
           this.$axios.post('/tranapiss', response)
 
@@ -115,8 +117,9 @@ export default {
           this.$axios.patch('/msgnpps/' + doc._id, updatest)
         })
 
+        this.$nuxt.refresh()
         this.message = 'Transfer transaction sucessfully!'
-        this.$router.push('/xay/trans')
+        // this.$router.push('/xay/trans')
       } catch (e) {
         this.message = e.response.data.message
       }
