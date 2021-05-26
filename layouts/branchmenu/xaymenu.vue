@@ -23,6 +23,36 @@
               <v-list-item-title v-text="item.title" />
             </v-list-item-content>
           </v-list-item>
+          <v-list-item>
+            <v-list-item-action>
+              <v-icon>mdi-web</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title>
+                <a
+                  href="https://vehome.ldblao.la/onlinestmt/Home"
+                  target="_blank"
+                  >Online Statement</a
+                >
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to="/xay/reports/reportTotal">
+            <v-list-item-action>
+              <v-icon>mdi-clipboard-check-outline</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title> Report-Total </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to="/xay/reports/reportDetails">
+            <v-list-item-action>
+              <v-icon>mdi-clipboard-check-outline</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title> Report-Details </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
         </v-list>
       </v-navigation-drawer>
       <v-app-bar :clipped-left="clipped" fixed app>
@@ -74,16 +104,6 @@ export default {
           icon: 'mdi-transfer',
           title: 'Data Tran',
           to: '/xay/trans',
-        },
-        {
-          icon: 'mdi-clipboard-check-outline',
-          title: 'Report-Total',
-          to: '/xay/reports/reportTotal',
-        },
-        {
-          icon: 'mdi-clipboard-check-outline',
-          title: 'Report-Details',
-          to: '/xay/reports/reportDetails',
         },
       ],
       miniVariant: false,

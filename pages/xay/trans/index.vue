@@ -1,12 +1,14 @@
 <template>
   <div>
     <v-container>
-      <h2>Checking and transfer transaction from LDB to NPP</h2>
-      <p class="subtitle-1">
+      <h2>
+        <v-icon>mdi-transfer</v-icon> Checking and transfer transaction from LDB
+        to NPP
+      </h2>
+      <p class="subtitle-1 ml-8">
         please checking and choose transaction that you want to clearing
       </p>
 
-      <!-- <CheckingData v-if="checkad" :message="selected" /> -->
       <AlertSuccess v-if="message" :message="message" />
 
       <form action="post" @submit.prevent="sendData">
