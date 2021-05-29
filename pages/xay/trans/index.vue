@@ -97,9 +97,28 @@ export default {
       try {
         const gselect = this.selected
         await gselect.forEach((doc) => {
+          // reverse format
+          function reverseFormatNumber(val, locale) {
+            const group = new Intl.NumberFormat(locale)
+              .format(1111)
+              .replace(/1/g, '')
+            const decimal = new Intl.NumberFormat(locale)
+              .format(1.1)
+              .replace(/1/g, '')
+            const reversedValg = val.replace(new RegExp('\\' + group, 'g'), '')
+            const reversedVald = reversedValg.replace(
+              new RegExp('\\' + decimal, 'g'),
+              '.'
+            )
+            return Number.isNaN(reversedVald) ? 0 : reversedVald
+          }
+
+          // reverse payment amount
+          const refmpaymt = reverseFormatNumber(doc.payment_amount, 'en')
+
           const response = {
             apis_account: doc.payment_account,
-            apis_amount: doc.payment_amount,
+            apis_amount: refmpaymt,
             apis_status: doc.payment_status,
             apis_date: doc.payment_date,
           }
